@@ -17,8 +17,8 @@ export const services = [
     image: {
       src: "/images/projects/ss-solutions-mechanised-road-sweeping-kurukshetra-1.png",
       alt: "S.S. Solutions mechanised road sweeping machine at work in Kurukshetra",
-      width: 1600,
-      height: 1067,
+      width: 960,
+      height: 1280,
     },
   },
   {
@@ -34,10 +34,11 @@ export const services = [
       "Partnerships in Dubai and international markets",
     ],
     image: {
-      src: "/images/projects/ss-solutions-mechanised-road-sweeping-kurukshetra-2.png",
-      alt: "S.S. Solutions mechanised road sweeping machine at work in Kurukshetra",
-      width: 1600,
-      height: 1067,
+      src: "/images/services/ss-solutions-waste-to-energy.png",
+      alt: "Illustrative image of a waste to energy facility",
+      width: 1536,
+      height: 1024,
+      illustrative: true,
     },
   },
   {
@@ -55,10 +56,11 @@ export const services = [
       "Preparation of technical and financial bids",
     ],
     image: {
-      src: "/images/projects/ss-solutions-mechanised-road-sweeping-kurukshetra-4.png",
-      alt: "S.S. Solutions mechanised road sweeping machine at work in Kurukshetra",
-      width: 960,
-      height: 1280,
+      src: "/images/services/ss-solutions-infrastructure-contracting.jpeg",
+      alt: "Illustrative image of road construction",
+      width: 1536,
+      height: 1024,
+      illustrative: true,
     },
   },
 ];

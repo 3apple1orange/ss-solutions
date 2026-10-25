@@ -36,22 +36,28 @@ const steps = [
 
 function ServiceVisual({ service }) {
   if (service.image) {
+    const { illustrative } = service.image;
     return (
-      <div className="group relative">
-        <div className="reveal-wipe aspect-[4/3] overflow-hidden rounded-sm bg-ink/5">
-          <Image
-            src={service.image.src}
-            alt={service.image.alt}
-            width={service.image.width}
-            height={service.image.height}
-            sizes="(min-width: 768px) 40vw, 100vw"
-            className="h-full w-full object-cover"
-          />
+      <figure className="group relative">
+        <div className="relative">
+          <div className="reveal-wipe aspect-[4/3] overflow-hidden rounded-sm bg-ink/5">
+            <Image
+              src={service.image.src}
+              alt={service.image.alt}
+              width={service.image.width}
+              height={service.image.height}
+              sizes="(min-width: 768px) 40vw, 100vw"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <span className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-full bg-paper text-ink">
+            <ServiceIcon slug={service.slug} className="h-6 w-6" />
+          </span>
         </div>
-        <span className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-full bg-paper text-ink">
-          <ServiceIcon slug={service.slug} className="h-6 w-6" />
-        </span>
-      </div>
+        {illustrative && (
+          <figcaption className="mt-3 text-xs text-ink/50">Illustrative image</figcaption>
+        )}
+      </figure>
     );
   }
 
@@ -192,7 +198,7 @@ export default function ServicesPage() {
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },
-          { name: title, path: "/services" },
+          { name: "Services", path: "/services" },
         ])}
       />
     </>

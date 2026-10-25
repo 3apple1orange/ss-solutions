@@ -228,3 +228,29 @@
     transform: scale(1.04);
   }
 }
+
+@layer components {
+  /* Hand-drawn marker highlight */
+  .mark {
+    padding: 0 0.14em;
+    margin: 0 -0.04em;
+    background-image: linear-gradient(
+      100deg,
+      transparent 0.6%,
+      color-mix(in srgb, var(--color-brand) 75%, transparent) 2.5%,
+      color-mix(in srgb, var(--color-brand) 60%, transparent) 60%,
+      color-mix(in srgb, var(--color-brand) 75%, transparent) 97%,
+      transparent 99.4%
+    );
+    background-repeat: no-repeat;
+    background-position: 0 90%;
+    background-size: 100% 0.42em;
+    border-radius: 0.7em 0.25em 0.6em 0.3em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    transition: background-size 0.9s cubic-bezier(0.65, 0, 0.35, 1) var(--mark-delay, 400ms);
+  }
+  .js .reveal:not([data-visible]) .mark {
+    background-size: 0% 0.42em;
+  }
+}
