@@ -20,7 +20,7 @@ export const site = {
   geographicFocus: ["Kurukshetra", "Delhi NCR", "Telangana", "Dubai", "Barcelona"],
 
   contact: {
-    email: "m@manansingla.com", // switch to the S.S. Solutions mailbox once it exists
+    email: "contact@thesssolutions.in", 
     phone: null,
     address: {
       streetAddress: "Sector 33",
@@ -37,6 +37,8 @@ export const site = {
     id: "https://www.manansingla.com/#person",
     url: "https://www.manansingla.com/",
     aboutUrl: "https://www.manansingla.com",
+    email: "m@manansingla.com",
+    
   },
 
   related: {

@@ -65,10 +65,10 @@ export default function ContactPage() {
                 ))}
               </dl>
 
-              <p className="mt-10 max-w-sm text-sm leading-relaxed text-ink/60">
-                For press or personal enquiries, visit{" "}
-                <a href={site.proprietor.aboutUrl} className="link-line text-ink">
-                  manansingla.com
+                <p className="mt-10 max-w-sm text-sm leading-relaxed text-ink/60">
+                For press or personal enquiries, write to{" "}
+                <a href={`mailto:${site.proprietor.email}`} className="link-line text-ink">
+                  {site.proprietor.email}
                 </a>
                 .
               </p>
