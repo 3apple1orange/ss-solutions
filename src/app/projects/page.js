@@ -157,12 +157,16 @@ export default function ProjectsPage() {
         <JsonLd
           data={{
             "@context": "https://schema.org",
-            "@graph": allPhotos.map((photo) => ({
+              "@graph": allPhotos.map((photo) => ({
               "@type": "ImageObject",
               contentUrl: `${site.url}${photo.src}`,
               caption: photo.caption || photo.alt,
               creator: { "@id": orgId },
               copyrightHolder: { "@id": orgId },
+              creditText: site.name,
+              copyrightNotice: `© ${new Date().getFullYear()} ${site.name}`,
+              license: `${site.url}/terms`,
+              acquireLicensePage: `${site.url}/contact`,
             })),
           }}
         />
